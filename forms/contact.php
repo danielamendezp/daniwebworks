@@ -17,14 +17,14 @@
   $contact->subject = $_POST['subject'];
 
   // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
   $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
+    'host' => 'smtp.gmail.com',        // Host SMTP de Gmail
+    'username' => 'mendez.daniela@gmail.com', // Tu dirección de correo electrónico de Gmail
+    'password' => 'xx',        // Tu contraseña de Gmail (considera usar una contraseña de aplicación)
+    'port' => '587',                    // Puerto SMTP para Gmail
+    'encryption' => 'tls'               // Encriptación TLS
   );
-  */
+  
 
   $contact->add_message( $_POST['name'], 'From');
   $contact->add_message( $_POST['email'], 'Email');
